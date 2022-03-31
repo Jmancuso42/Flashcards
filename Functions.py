@@ -1,7 +1,7 @@
  
 import json
 import random
-
+import os
 
 
 
@@ -9,9 +9,22 @@ import random
 class ioTools:
 
 
+    def printListOfQuizzes(path_to_json):
+        for fileName in [filePos for filePos in os.listdir(path_to_json) if file.endswith('.json')]
+        i = 0
+        with open(path_to_json + fileName) as jsonFile:
+        
+            quizName = fileName
+ #       quizFile = json.load(jsonFile)
+            print(f"{quizName}")
+            i += 1
+            
+
+
     ##maybe make a function that puts all the questions into a list, and either seperate or same function into an
 
     def bufferQuestion():
+        #scrap function right now 
         superDict = {"Q", "C", "A"}
 
         with open('questionsAlt.json','r') as json_file:
